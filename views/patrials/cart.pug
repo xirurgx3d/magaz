@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1 Корзина
+    each val in curs
+        section
+            a(href=`/curse/${val.title}`)=val.title
+            span=val.price
+            span=val.url
+            a(href=`/cart/delet/${val.title}`) удалить
+        hr
+    form(action='/orders' method='POST')
+        input(type="hidden" name="title" value=``)
+        button.btn.btn-primary(type='submit') оформить заказ   
+    

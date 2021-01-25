@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    h1 Курсы
+    each val in curs
+        section
+            a(href=`/curse/${val.title}`)=val.title
+            span=val.price
+            span=val.url
+            a(href=`/curse/edit/${val.title}?aswon=true`) редактировать
+            a(href=`/cart/add/${val.title}`) купить
+        hr

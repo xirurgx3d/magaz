@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+    h1= title
+    form(action='/add' method='POST')
+        .form-group
+            label(for='exampleInputEmail1') Название курса
+            input#exampleInputEmail1.form-control(type='text' name='text' placeholder='Enter email')
+        
+        .form-group
+            label(for='exampleInputPassword1') Цена курса
+            input#exampleInputPassword1.form-control(type='number' name='price' placeholder='Password')
+        .form-group
+            label(for='exampleInputPassword2') Картинка
+            input#exampleInputPassword2.form-control(type='text' name='url' placeholder='Password')    
+        
+        button.btn.btn-primary(type='submit') Submit

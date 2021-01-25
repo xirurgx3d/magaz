@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    h1 авторизация
+    form(action='/login' method='POST')
+        .form-group
+            label(for='exampleInputEmail1') мыло
+            input#exampleInputEmail1.form-control(type='text' name='email' placeholder='Enter email')
+       
+        .form-group
+            label(for='exampleInputPassword2') пароль
+            input#exampleInputPassword2.form-control(type='text' name='password' placeholder='Password')    
+        
+        button.btn.btn-primary(type='submit') Submit
